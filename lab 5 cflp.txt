@@ -1,0 +1,31 @@
+Ex 1
+>(defun atomi(l) (cond ((null l) 0) ((atom l) 1) (t (+ (atomi(car l)) (atomi(cdr l))))))
+ATOMI
+> (atomi '(1 2 3))
+3
+
+Ex 3:
+> (defun dubluri(l) (if(null l) nil (cons (first l) (dubluri (remove (first l) l)))))
+DUBLURI
+> (dubluri '(1 2 3 3))
+(1 2 3)
+
+Ex 4:
+>(defun presentp(l atm) (cond ((NULL l) nil)  ((= atm (car l)) t) ((listp (car l)) (presentp (car l) atm)) ((atom (car l))
+presentp (cdr l) atm)))
+PRESENTP
+> (presentp '(1 2 3) 1)
+T
+
+Ex 5:
+> (defun lista_cifre(n) (do((x n (floor(/ x 10))) (l '() (append l (list(rem x 10))))) ((zerop x) l)))
+LISTA_CIFRE
+> (lista_cifre 101)
+(1 0 1)
+
+Ex 6:
+> (defun pozpar(l) (do((poz 1 (+ poz 2)) (x '() (append x (list(nth poz l))))) ((>= poz (length l)) x)))
+POZPAR
+> (pozpar '(1 2 3 4 5))
+(2 4)
+
