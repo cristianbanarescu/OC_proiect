@@ -1,0 +1,5 @@
+
+-is designed to measure both the direction and the magnitude of Earth’s magnetic fields,
+-3-Axis Magnetoresistive Sensors
+-SDA Serial Data – I2C Master/Slave Data
+-SCL Serial Clock – I2C Master/Slave Clock
